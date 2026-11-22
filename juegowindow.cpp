@@ -83,17 +83,47 @@ void juegowindow::construirui() {
 
     connect(btnlanzar, &QPushButton::clicked, this, &juegowindow::lanzarproyectil);
     connect(btnreiniciar, &QPushButton::clicked, this, &juegowindow::reiniciarjuego);
+    connect(spinangulo, static_cast<void (QDoubleSpinBox::*)(double)>(&QDoubleSpinBox::valueChanged),
+            this,[this](double) { actualizarapuntado(); });
+
+}
+
+void juegowindow::dibujarRival(int jugador) {
+    const double cx = px(juegologica::rivalx(jugador));
+    const double base = py(0.0);
+    const QPen lapiz(Qt::black,2);
 
 
+    escena->addEllipse(cx-6,base-46,12,12, lapiz, QBrush(Qt::white));
+    escena->addLine(cx,base -34,cx, base -16, lapiz);
+    escena->addLine(cx - 10, base-28,cx +10, base - 28,lapiz);
+    escena->addLine(cx, base -16, cx -8,base -2,lapiz);
+    escena->addLine(cx, base -16,cx+8,base-2,lapiz);
 
+    QGraphicsSimpleTextItem* t = escena->addSimpleText("Rival");
+    t->setFont(QFont("Arial",8));
+    t->setpos(cx-t->boudingrect().width()/2.0,  base -14+0);
+    t->setZValue(5);
+}
 
-
-
-
-
+void juegowindow::construirescena() {
+    rectobstaculos.clear();
+    textoobstaculos.clear();
+    proyectilitem = nullptr;
+    trayectoriaitem = nullptr;
+    apuntadoitem = nullptr;
+    escena->clear();
 
 
 }
+
+
+
+
+
+
+
+
 
 
 

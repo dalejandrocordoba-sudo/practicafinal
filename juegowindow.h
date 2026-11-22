@@ -47,8 +47,8 @@ private:
     QLabel* lblturno;
     QLabel* lblmensaje;
 
-    std::vector<QGraphicsRectItem*> rec0bstaculos;
-    std::vector<QGraphicsSimpleTextItem*>texto0bstaculos;
+    std::vector<QGraphicsRectItem*> rectobstaculos;
+    std::vector<QGraphicsSimpleTextItem*>textoobstaculos;
     QGraphicsEllipseItem* proyectilitem;
     QGraphicsPathItem* trayectoriaitem;
     QGraphicsLineItem* apuntadoitem;
