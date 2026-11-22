@@ -52,6 +52,46 @@ void juegowindow::construirui() {
     f.setPointSize(12);
     lblTurno->setfont(f);
 
+    spinangulo = new QDoubleSpinBox(central);
+    spinangulo->setrange(0.0,90.0);4
+        spinangulo->setvalue(45.0);
+    spinangulo->setSuffix(" °");
+
+    spinvelocidad = new QDoublespinbox(central);
+    spinvelocidad->setrange(5.0, 100.0);
+    spinvelocidad->setvalue(45.0);
+    spinvelocidad->setsuffix("m/s");
+
+    btnlanzar = new QPushButton("lanzar proyectil", central);
+    btnreiniciar = new QPushButton("reiniciar", central);
+    lblmensaje = new QLabel("destruye la infraestructura rival y elimina a su representante", central);
+
+    QHBoxLayout* controles = new QHBoxLayout();
+    controles->addWidget(lblturno);
+    controles->addStretch();
+    controles->addWidget(new QLabel("angulo: ", central));
+    controles->addWidget(spinangulo);
+    controles->addWidget(new QLabel("velocidad:", central));
+    controles->addWidget(spinvelocidad);
+    controles->addWidget(btnlanzar);
+    controles->addWidget(btnreiniciar);
+    controles->addWidget(vista);
+    controles->addLayout(controles);
+    controles->addWidget(lblmensaje);
+    setCentralWidget(central);
+    setWindowTitle("juego de estrategia por turnos ");
+
+    connect(btnlanzar, &QPushButton::clicked, this, &juegowindow::lanzarproyectil);
+    connect(btnreiniciar, &QPushButton::clicked, this, &juegowindow::reiniciarjuego);
+
+
+
+
+
+
+
+
+
 
 }
 
