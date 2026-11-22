@@ -182,7 +182,7 @@ void juegowindow::actualizarobstaculos() {
         }
     }
 void juegowindow::actualizarturno(){
-    const int j = ligica.getturno();
+    const int j = logica.getturno();
     lblturno->setText(QString("Turno: jugador %1").arg(j));
     lblturno->setStyleSheet(j == 1 ? "color: rgb (30,90,200);": "color: rgb(200,40,40);");
 }
@@ -215,13 +215,30 @@ void juegowindow::tick() {
         trayectoriaitem->setPath(trayectoria);
     }
     actualizarobstaculos();
-    lblmensaje->setText(QString::fromStdString(logica.getmensaje()));
+    lblmensaje->setText(QString::fromStdString(logica.getMensaje()));
 
 
-
+    if(logica.getEstado() == juegologica::estado::terminado) {
+        timer->stop();
+        QMessageBox::information(this,"¡victoria!",
+            QString("el jugador %1 ha eliminado al representante enemigo.").arg(logica.getganador()));
+        reiniciarjuego();
+    } else if (logica.getEstado() == juegologica::estado::esperando) {
+            timer->stop();
+            proyectilitem->setVisible(false);
+            btnlanzar->setEnabled(true);
+            actualizarturno();
+            actualizarapuntado();
+        }
 }
 
-
+void juegowindow::reiniciarjuego(){
+    timer->stop();
+    logica.reiniciar();
+    btnlanzar->setEnabled(true);
+    construirescena();
+    lblmensaje->setText("Nueva partida. destruye la infraestructura rival ");
+}
 
 
 
