@@ -50,10 +50,22 @@ public:
 
     void reiniciar();
 
+    bool lanzar (double angulogrados, double velocidad);
 
+    void avanzar(double segundos);
 
+    estado getestado() const { return estado; }
+    int getturno() const const { return turno; }
+    int getganador() const { return ganador; }
+    const std::string& getmensaje() const {return mensaje;}
+    const motorfisico& getmotor() const {return motor;}
+    double gettiempovuelo() const { return tiempovuelo; }
 
-
+    static double bocax(int jugador, double angulogrados);
+    static double bocay(double angulogrados);
+    static double rivalx(int jugador);
+    static double rivaly() {return radio_rival; }
+    static double cañonx (int jugador) {return jugador == 1 ? cañon_x : ancho - cañon_x; }
 };
 
 #endif // JUEGOLOGICA_H
