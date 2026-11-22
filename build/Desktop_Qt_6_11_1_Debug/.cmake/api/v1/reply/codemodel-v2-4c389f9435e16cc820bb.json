@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-2928fcaa0ef5a90811a6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "laboratorio_final",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "laboratorio_final::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-laboratorio_final-Debug-bd0d2797e977f68029dc.json",
+					"name" : "laboratorio_final",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "laboratorio_final_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-laboratorio_final_autogen-Debug-f8717b42702b7700fe58.json",
+					"name" : "laboratorio_final_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "laboratorio_final_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-laboratorio_final_autogen_timestamp_deps-Debug-cae63d7a0668b4e82c35.json",
+					"name" : "laboratorio_final_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug",
+		"source" : "/home/sebastian/tareas-informatica-2/laboratorio_final"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
