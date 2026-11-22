@@ -5,7 +5,9 @@ project(practica5 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(practica5 main.cpp)
+add_executable(practica5 main.cpp
+    simulacion.h
+    particula.h)
 
 include(GNUInstallDirs)
 install(TARGETS practica5
