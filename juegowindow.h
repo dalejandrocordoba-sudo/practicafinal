@@ -41,7 +41,7 @@ private:
     QTimer* timer;
 
     QDoubleSpinBox* spinangulo;
-    QDoubleSpinBox* vista;
+    QDoubleSpinBox* spinvelocidad;
     QPushButton* btnlanzar;
     QPushButton* btnreiniciar;
     QLabel* lblturno;
