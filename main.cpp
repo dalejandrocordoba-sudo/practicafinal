@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include "particula.h"
+#include "simulacion.h"
 
 
 
@@ -19,6 +21,6 @@ int main()
     Simulacion s(0.01f, 8.0f, -9.81f, 0.85f, 0.0f, 40.0f, 0.0f);
 
     s.ejecutar(particulas, "trayectoria_colisiones.txt");
-    cout << "Hello World!" << endl;
+
     return 0;
 }
