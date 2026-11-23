@@ -17,9 +17,9 @@ private:
 
 
     std::vector<Particula> particulas;
-    std::vector<Obstaculo> obstaculos;
-    std::vector<Evento> eventosPaso;   // eventos del último paso
-    std::vector<Evento> historial;     // todos los eventos
+    std::vector<obstaculo> obstaculos;
+    std::vector<evento> eventosPaso;   // eventos del último paso
+    std::vector<evento> historial;     // todos los eventos
 
     void registrar(tipoevento t, int id1, int id2, double x, double y, double valor = 0.0, const std::string& detalle = "");
 
@@ -51,10 +51,10 @@ public:
 
     std::vector<Particula>& getparticulas() { return particulas; }
     const std::vector<Particula>& getparticulas() const { return particulas; }
-    std::vector<Obstaculo>& getobstaculos() { return obstaculos; }
-    const std::vector<Obstaculo>& getobstaculos() const { return obstaculos; }
-    std::vector<Evento>& geteventospaso() const { return eventosPaso; }
-    const std::vector<Evento>& gethistorial() const { return historial; }
+    std::vector<obstaculo>& getobstaculos() { return obstaculos; }
+    const std::vector<obstaculo>& getobstaculos() const { return obstaculos; }
+    std::vector<evento>& geteventospaso() const { return eventosPaso; }
+    const std::vector<evento>& gethistorial() const { return historial; }
 
 
 
