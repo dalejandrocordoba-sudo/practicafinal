@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "laboratorio_final_autogen"
   "CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o"
   "CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o.d"
+  "CMakeFiles/laboratorio_final.dir/juegologica.cpp.o"
+  "CMakeFiles/laboratorio_final.dir/juegologica.cpp.o.d"
   "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o"
   "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o.d"
   "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o"

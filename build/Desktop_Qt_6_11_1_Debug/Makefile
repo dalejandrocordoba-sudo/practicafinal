@@ -224,6 +224,30 @@ gestorarchivos.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s
 .PHONY : gestorarchivos.cpp.s
 
+juegologica.o: juegologica.cpp.o
+.PHONY : juegologica.o
+
+# target to build an object file
+juegologica.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.o
+.PHONY : juegologica.cpp.o
+
+juegologica.i: juegologica.cpp.i
+.PHONY : juegologica.i
+
+# target to preprocess a source file
+juegologica.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.i
+.PHONY : juegologica.cpp.i
+
+juegologica.s: juegologica.cpp.s
+.PHONY : juegologica.s
+
+# target to generate assembly for a file
+juegologica.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.s
+.PHONY : juegologica.cpp.s
+
 juegowindow.o: juegowindow.cpp.o
 .PHONY : juegowindow.o
 
@@ -314,6 +338,9 @@ help:
 	@echo "... gestorarchivos.o"
 	@echo "... gestorarchivos.i"
 	@echo "... gestorarchivos.s"
+	@echo "... juegologica.o"
+	@echo "... juegologica.i"
+	@echo "... juegologica.s"
 	@echo "... juegowindow.o"
 	@echo "... juegowindow.i"
 	@echo "... juegowindow.s"
