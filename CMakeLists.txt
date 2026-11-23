@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_executable(practica5 main.cpp
     simulacion.h
-    particula.h)
+    particula.h
+    particula.cpp
+    simulacion.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS practica5
