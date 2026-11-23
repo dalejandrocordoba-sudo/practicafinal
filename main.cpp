@@ -8,7 +8,7 @@
 
 using namespace std;
 
-static void momentototal(const motorfisico m, double& py, double& masa){
+static void momentototal(const motorfisico m, double& px, double& py, double& masa){
 
     px = py = masa = 0.0;
     for (const auto& p : m.getparticulas()){
@@ -37,7 +37,7 @@ int main()
     const double INF = std::numeric_limits<double>::infinity();
     motor.agregarobstaculo(obstaculo(1, 20.0, 10.0, 8.0, 8.0, INF, 0.7, 0, "cuadrado 1"));
     motor.agregarobstaculo(obstaculo(2, 45.0, 28.0, 8.0, 8.0, INF, 0.6, 0, "cuadrado 2"));
-    motor.agregarobstaculo(Oobstaculo(3, 70.0,  8.0, 8.0, 8.0, INF, 0.8, 0, "cuadrado 3"));
+    motor.agregarobstaculo(obstaculo(3, 70.0,  8.0, 8.0, 8.0, INF, 0.8, 0, "cuadrado 3"));
     motor.agregarobstaculo(obstaculo(4, 80.0, 38.0, 8.0, 8.0, INF, 0.5, 0, "cuadrado 4"));
 
 
@@ -53,12 +53,12 @@ int main()
     gestorarchivos gestor;
     if (!gestor.abrirtrayectoria("trayectoria_simulacion.txt")){
         std::cerr <<"error, no se puede abrir el archivo";
-        return 1
+        return 1;
 
     }
 
     double px0, py0, m0;
-    momentototal(motor, px, py0, m0);
+    momentototal(motor, px0, py0, m0);
 
     const double dt = 0.005;
     const double duracion = 10.0;
@@ -76,8 +76,8 @@ int main()
 
     gestor.cerrartrayectoria();
 
-    gestionararchivos::guardareventos("evento_simulacion.txt", motor.gethistorial());
-    gestionararchivos::guardarobstaculos("obtaculos.txt", motor.getobstaculos());
+    gestorarchivos::guardareventos("evento_simulacion.txt", motor.gethistorial());
+    gestorarchivos::guardarobstaculos("obtaculos.txt", motor.getobstaculos());
 
 
     std::map<std::string, int> conteo;
