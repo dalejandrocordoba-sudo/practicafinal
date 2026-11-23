@@ -2,13 +2,14 @@
 #include <limits>
 #include <map>
 #include <vector>
+#include <string>
 #include "particula.h"
 #include "simulacion.h"
 #include "motorfisico.h"
 
 using namespace std;
 
-static void momentototal(const motorfisico m, double& px, double& py, double& masa){
+static void momentototal(const motorfisico& m, double& px, double& py, double& masa){
 
     px = py = masa = 0.0;
     for (const auto& p : m.getparticulas()){
@@ -76,8 +77,8 @@ int main()
 
     gestor.cerrartrayectoria();
 
-    gestorarchivos::guardareventos("evento_simulacion.txt", motor.gethistorial());
-    gestorarchivos::guardarobstaculos("obtaculos.txt", motor.getobstaculos());
+    gestorarchivos::guardareventos("eventos_simulacion.txt", motor.gethistorial());
+    gestorarchivos::guardarobstaculos("obstaculos.txt", motor.getobstaculos());
 
 
     std::map<std::string, int> conteo;
@@ -85,20 +86,21 @@ int main()
     std::cout << "\ncolisiones registradas:\n";
     for (const auto& kv : conteo) std::cout << "  " << kv.first << ": " << kv.second << "\n";
 
-    std::cout << "Fusiones (instante, particulas, masa resultante):";
+    std::cout << "Fusiones (instante, particulas, masa resultante): \n";
     for (const auto& e : motor.gethistorial())
         if (e.tipo == tipoevento::FUSION)
             std::cout << "  t=" << e.tiempo << " s  P" << e.id1 << " + P" << e.id2
                       << "  -> M=" << e.valor << " kg\n";
 
     double px1, py1, m1;
-    momentoTotal(motor, px1, py1, m1);
+    momentototal(motor, px1, py1, m1);
     std::cout << "\nMasa total: " << m0 << " -> " << m1 << " kg (se conserva)\n";
+
     std::cout << "\nParticulas activas al final:\n";
-    for (const auto& p : motor.getParticulas())
+    for (const auto& p : motor.getparticulas())
         if (p.isactiva())
             std::cout << "  P" << p.getid() << " m=" << p.getmasa() << " pos=("
-                      << p.getX() << ", " << p.getY() << ")\n";
+                      << p.getx() << ", " << p.gety() << ")\n";
 
     std::cout << "\nArchivos generados: trayectoria_simulacion.txt, "
                  "eventos_simulacion.txt, obstaculos.txt\n";
@@ -111,7 +113,3 @@ int main()
 
 
 
-
-
-
-}
