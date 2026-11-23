@@ -540,6 +540,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.h",
+			"MU",
+			"EWIEGA46WW/moc_gestorarchivos.cpp",
+			null
+		],
+		[
 			"/home/sebastian/tareas-informatica-2/laboratorio_final/juegologica.h",
 			"MU",
 			"EWIEGA46WW/moc_juegologica.cpp",
@@ -611,6 +617,11 @@
 	"SETTINGS_FILE" : "/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/laboratorio_final_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.cpp",
 			"MU",

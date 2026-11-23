@@ -200,6 +200,30 @@ laboratorio_final_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final_autogen.dir/build.make CMakeFiles/laboratorio_final_autogen.dir/build
 .PHONY : laboratorio_final_autogen/fast
 
+gestorarchivos.o: gestorarchivos.cpp.o
+.PHONY : gestorarchivos.o
+
+# target to build an object file
+gestorarchivos.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o
+.PHONY : gestorarchivos.cpp.o
+
+gestorarchivos.i: gestorarchivos.cpp.i
+.PHONY : gestorarchivos.i
+
+# target to preprocess a source file
+gestorarchivos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i
+.PHONY : gestorarchivos.cpp.i
+
+gestorarchivos.s: gestorarchivos.cpp.s
+.PHONY : gestorarchivos.s
+
+# target to generate assembly for a file
+gestorarchivos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s
+.PHONY : gestorarchivos.cpp.s
+
 juegowindow.o: juegowindow.cpp.o
 .PHONY : juegowindow.o
 
@@ -287,6 +311,9 @@ help:
 	@echo "... laboratorio_final_autogen"
 	@echo "... laboratorio_final_autogen_timestamp_deps"
 	@echo "... laboratorio_final"
+	@echo "... gestorarchivos.o"
+	@echo "... gestorarchivos.i"
+	@echo "... gestorarchivos.s"
 	@echo "... juegowindow.o"
 	@echo "... juegowindow.i"
 	@echo "... juegowindow.s"

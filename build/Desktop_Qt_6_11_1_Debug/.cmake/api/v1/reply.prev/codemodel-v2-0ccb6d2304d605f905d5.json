@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-e879e3b746d2d29f9f25.json",
+					"jsonFile" : "directory-.-Debug-330241b1663063e664e1.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "laboratorio_final::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-laboratorio_final-Debug-c4ce379fd0f0a15930c7.json",
+					"jsonFile" : "target-laboratorio_final-Debug-f25bbdf7c79e1110cb84.json",
 					"name" : "laboratorio_final",
 					"projectIndex" : 0
 				},
