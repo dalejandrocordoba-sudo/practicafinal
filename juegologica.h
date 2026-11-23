@@ -55,7 +55,7 @@ public:
     void avanzar(double segundos);
 
     estado getestado() const { return estado; }
-    int getturno() const const { return turno; }
+    int getturno() const { return turno; }
     int getganador() const { return ganador; }
     const std::string& getmensaje() const {return mensaje;}
     const motorfisico& getmotor() const {return motor;}
