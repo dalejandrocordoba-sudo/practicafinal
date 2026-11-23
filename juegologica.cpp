@@ -140,8 +140,6 @@ void juegologica::avanzar(double segundos) {
             terminarturno();
             return;
         }
-
-
     }
 }
 
