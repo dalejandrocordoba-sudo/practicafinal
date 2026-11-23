@@ -12,12 +12,12 @@ void gestorarchivos::registrarpaso(double tiemoo, const std::vector<particula>& 
                                    const std::vector<evento>& eventosdelpaso) {
     if (!salidatrayectoria.is_open()) return;
 
-    for ( const auto& p : paarticulas) {
+    for ( const auto& p : particulas) {
 
         std::string ev;
-        for ( const auto& e eventosdelpaso) {
+        for ( const auto& e: eventosdelpaso) {
             const bool participa = (e.id1 == p.getid()) ||
-                                   (e.tipo == TipoEvento::FUSION && e.id2 == p.getId());
+                                   (e.tipo == tipoevento::fusion && e.id2 == p.getId());
             if (!participa) continue;
             if (!ev.empty()) ev += "+";
             ev += nombreevento(e.tipo);
