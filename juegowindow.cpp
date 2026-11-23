@@ -153,7 +153,7 @@ void juegowindow::construirescena() {
     proyectilitem = escena->addEllipse(-rp,-rp,2* rp,2 * rp, QPen(Qt::black),QBrush(Qt::red));
     proyectilitem->setZValue(10);
     proyectilitem->setVisible(false);
-    apuntadoitem = escena->addline(0,0,0,0, QPen(Qt::black, 4));
+    apuntadoitem = escena->addLine(0,0,0,0, QPen(Qt::black, 4));
     apuntadoitem->setZValue(6);
 
     actualizarobstaculos();

@@ -62,7 +62,7 @@ private:
     void construirui();
     void construirescena();
     void dibujarrival(int jugador);
-    void actualizar0bstaculos();
+    void actualizarobstaculos();
     void actualizarturno();
 
 };
