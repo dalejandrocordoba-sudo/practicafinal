@@ -66,9 +66,44 @@ int main() {
         check(j.getturno()==2);
     }
     {
+        juegologica j;
+        double mejor = 0 ;
+        j.lanzar(45,55);
+        while (j.getestado() == juegologica::estado::en_vuelo) j.avanzar(0.05);
+        for (const auto& o  j.getmotor().getobstaculos()) {
+            if(o.getpropietario() == 1)
+                check(o.getresistenciaactual() == o.getsistenciamaxima());
+            else if (o.getresistenciaactual() < o.getresistenciamaxima()) mejor =1;
+
+        }
+        std::cout << "tiro 45/55 daño a 32: " (mejor ? "si" : "no" ) << "\n";
+    }
+    {
+        juegologica j;
+        int tiros=0;
+
+        while (j.getestado() != juegologica::estado::terminado && tiros< 400) {
+
+            const double ang =20+(tiros*7) %60;
+            const double vel = 25+(tiros * 133) %60;
+            j.lanzar(ang,vel);
+            while (j.getestado() == juegologica::estado::en_vuelo)j.avanzar(0.5);
+                ++tiros;
+            }
+            std::cout << "partida de prueba " << tiros << "tiros, ganar j" << j.getganador()
+                      << " (" << j.getmensaje()<< ")\n";
+            check(j.getestado() == juegologica::estado::terminado);
+            check(j.getganador() == 1 || j.getganador() == 2);
+            j.reiniciar();
+            check(j.getestado() == juegologica::estado::esperando);
+            check.gerganador() == 0);
+        }
+
+    if (fallos == 0 ) std::cout << "todas las pruebas pasaron\n";
+    return fallos;
 
     }
-}
+
 
 
 
