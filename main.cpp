@@ -1,9 +1,12 @@
 #include <iostream>
+#include <limits>
+#include <map>
 #include <vector>
 #include "particula.h"
 #include "simulacion.h"
+#include "MotorFisisco.h"
 
-
+static void momentoTotal ()
 
 
 using namespace std;

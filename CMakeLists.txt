@@ -9,7 +9,9 @@ add_executable(practica5 main.cpp
     simulacion.h
     particula.h
     particula.cpp
-    simulacion.cpp)
+    simulacion.cpp
+    motorfisico.h
+    motorfisico.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS practica5
