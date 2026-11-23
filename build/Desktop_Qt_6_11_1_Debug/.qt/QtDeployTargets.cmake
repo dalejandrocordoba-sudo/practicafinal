@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_laboratorio_final_FILE /home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/laboratorio_final)
+set(__QT_DEPLOY_TARGET_laboratorio_final_TYPE EXECUTABLE)

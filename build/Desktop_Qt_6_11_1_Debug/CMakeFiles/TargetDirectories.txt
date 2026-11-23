@@ -1,0 +1,9 @@
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/laboratorio_final.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/edit_cache.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/rebuild_cache.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/list_install_components.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install/local.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/install/strip.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/laboratorio_final_autogen_timestamp_deps.dir
+/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles/laboratorio_final_autogen.dir

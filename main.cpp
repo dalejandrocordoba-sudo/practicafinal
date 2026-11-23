@@ -66,44 +66,8 @@ int main()
     const long pasos = static_cast<long>(duracion / dt);
 
 
-    gestor.registrarpaso(0.0, motor.getparticulas(), {});
-    for (long i =0; i < pasos; ++i){
+    s.ejecutar(particulas, "trayectoria_colisiones.txt");
 
-        motor.pasosimulacion(dt);
-        gestor.registrarpaso(motor.gettiempo(), motor.getparticulas(), motor.geteventospaso());
-
-    }
-
-
-    gestor.cerrartrayectoria();
-
-    gestorarchivos::guardareventos("eventos_simulacion.txt", motor.gethistorial());
-    gestorarchivos::guardarobstaculos("obstaculos.txt", motor.getobstaculos());
-
-
-    std::map<std::string, int> conteo;
-    for (const auto& e : motor.gethistorial()) conteo[nombreevento(e.tipo)]++;
-    std::cout << "\ncolisiones registradas:\n";
-    for (const auto& kv : conteo) std::cout << "  " << kv.first << ": " << kv.second << "\n";
-
-    std::cout << "Fusiones (instante, particulas, masa resultante): \n";
-    for (const auto& e : motor.gethistorial())
-        if (e.tipo == tipoevento::FUSION)
-            std::cout << "  t=" << e.tiempo << " s  P" << e.id1 << " + P" << e.id2
-                      << "  -> M=" << e.valor << " kg\n";
-
-    double px1, py1, m1;
-    momentototal(motor, px1, py1, m1);
-    std::cout << "\nMasa total: " << m0 << " -> " << m1 << " kg (se conserva)\n";
-
-    std::cout << "\nParticulas activas al final:\n";
-    for (const auto& p : motor.getparticulas())
-        if (p.isactiva())
-            std::cout << "  P" << p.getid() << " m=" << p.getmasa() << " pos=("
-                      << p.getx() << ", " << p.gety() << ")\n";
-
-    std::cout << "\nArchivos generados: trayectoria_simulacion.txt, "
-                 "eventos_simulacion.txt, obstaculos.txt\n";
     return 0;
 
 
