@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o.d"
   "CMakeFiles/laboratorio_final.dir/main.cpp.o"
   "CMakeFiles/laboratorio_final.dir/main.cpp.o.d"
+  "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o"
+  "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o.d"
   "laboratorio_final"
   "laboratorio_final.pdb"
   "laboratorio_final_autogen/mocs_compilation.cpp"

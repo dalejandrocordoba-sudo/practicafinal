@@ -320,6 +320,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_juego.o: test_juego.cpp.o
+.PHONY : test_juego.o
+
+# target to build an object file
+test_juego.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.o
+.PHONY : test_juego.cpp.o
+
+test_juego.i: test_juego.cpp.i
+.PHONY : test_juego.i
+
+# target to preprocess a source file
+test_juego.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.i
+.PHONY : test_juego.cpp.i
+
+test_juego.s: test_juego.cpp.s
+.PHONY : test_juego.s
+
+# target to generate assembly for a file
+test_juego.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.s
+.PHONY : test_juego.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,6 +374,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test_juego.o"
+	@echo "... test_juego.i"
+	@echo "... test_juego.s"
 .PHONY : help
 
 

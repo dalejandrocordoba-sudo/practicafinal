@@ -74,13 +74,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 65,
+				"line" : 67,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 48,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
@@ -322,7 +322,9 @@
 				0,
 				1,
 				2,
-				7
+				7,
+				8,
+				9
 			]
 		}
 	],
@@ -415,7 +417,9 @@
 				0,
 				1,
 				2,
-				7
+				7,
+				8,
+				9
 			]
 		},
 		{
@@ -425,7 +429,7 @@
 				3,
 				5,
 				6,
-				8
+				10
 			]
 		},
 		{
@@ -439,14 +443,14 @@
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				9
+				11
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				10
+				12
 			]
 		}
 	],
@@ -495,6 +499,18 @@
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
 			"path" : "gestorarchivos.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "juegologica.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "test_juego.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

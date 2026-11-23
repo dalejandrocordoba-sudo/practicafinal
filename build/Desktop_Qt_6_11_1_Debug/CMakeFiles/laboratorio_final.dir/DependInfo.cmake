@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.cpp" "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o.d"
   "/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/laboratorio_final_autogen/mocs_compilation.cpp" "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o.d"
   "/home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp" "CMakeFiles/laboratorio_final.dir/main.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/main.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/test_juego.cpp" "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
