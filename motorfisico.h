@@ -18,7 +18,7 @@ private:
 
     std::vector<Particula> particulas;
     std::vector<obstaculo> obstaculos;
-    std::vector<evento> eventosPaso;   // eventos del último paso
+    std::vector<evento> eventospaso;   // eventos del último paso
     std::vector<evento> historial;     // todos los eventos
 
     void registrar(tipoevento t, int id1, int id2, double x, double y, double valor = 0.0, const std::string& detalle = "");
@@ -41,11 +41,11 @@ public:
 
     void resolvercolisionesparedes(Particula& p);
     void resolvercolisionesobstaculos(Particula& p);
-    void resolvercolisionesParticulas();
+    void resolvercolisionesparticulas();
 
     double gettiempo() const { return tiempo; }
-    double getancho() const { return anchoescenario; }
-    double getalto() const { return altoescenario; }
+    double getancho() const { return anchoesenario; }
+    double getalto() const { return altoesenario; }
     double getgravedad() const { return gravedad; }
     double getfactorDano() const { return factordano; }
 

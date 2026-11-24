@@ -8,23 +8,23 @@ public:
     Particula(float x = 0.0f, float y = 0.0f, float vx = 10.0f, float vy = 10.0f,
               float masa = 1.0f, float radio = 0.5f);
 
-    float getX() const;
-    float getY() const;
-    float getVX() const;
-    float getVY() const;
-    float getMasa() const;
-    float getRadio() const;
+    float getx() const;
+    float gety() const;
+    float getvx() const;
+    float getvy() const;
+    float getmasa() const;
+    float getradio() const;
 
-    void setX(float x);
-    void setY(float y);
-    void setVX(float vx);
-    void setVY(float vy);
+    void setx(float x);
+    void sety(float y);
+    void setvx(float vx);
+    void setvy(float vy);
 
 private:
     float x;
     float y;
-    float VX;
-    float VY;
+    float vx;
+    float vy;
     float masa;
     float radio;
 };
