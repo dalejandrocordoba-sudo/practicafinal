@@ -29,12 +29,12 @@ public:
     static constexpr double dt = 0.005;
     static constexpr double tiempo_max_turno = 8.0;
 
-    enum class estado { esperando,en_vuelo, terminado };
+    enum class Estado { esperando,en_vuelo, terminado };
 
 
 private:
     motorfisico motor;
-    estado estado;
+    Estado estado;
     int turno;
     int ganador;
     int lanzamientos;
@@ -54,7 +54,7 @@ public:
 
     void avanzar(double segundos);
 
-    estado getestado() const { return estado; }
+    Estado getestado() const { return estado; }
     int getturno() const { return turno; }
     int getganador() const { return ganador; }
     const std::string& getmensaje() const {return mensaje;}
