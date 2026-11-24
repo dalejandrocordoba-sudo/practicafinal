@@ -121,7 +121,7 @@ void juegowindow::construirescena() {
 
     for (int j = 1; j<= 2 ; ++j){
         const QColor color = (j==1) ? QColor(30,90,200) : QColor(200,40,40);
-        const double cx = px(juegologica::canonx(j));
+        const double cx = px(juegologica::canon_x(j));
         const double cy = py(juegologica::canon_y);
         const double rep = px(8.0);
         const double xrep = (j == 1) ? 0.0 : px(juegologica::ancho) - rep;
@@ -215,15 +215,15 @@ void juegowindow::tick() {
         trayectoriaitem->setPath(trayectoria);
     }
     actualizarobstaculos();
-    lblmensaje->setText(QString::fromStdString(logica.getMensaje()));
+    lblmensaje->setText(QString::fromStdString(logica.getmensaje()));
 
 
-    if(logica.getEstado() == juegologica::estado::terminado) {
+    if(logica.getEstado() == juegologica::Estado::terminado) {
         timer->stop();
         QMessageBox::information(this,"¡victoria!",
             QString("el jugador %1 ha eliminado al representante enemigo.").arg(logica.getganador()));
         reiniciarjuego();
-    } else if (logica.getEstado() == juegologica::estado::esperando) {
+    } else if (logica.getEstado() == juegologica::Estado::esperando) {
             timer->stop();
             proyectilitem->setVisible(false);
             btnlanzar->setEnabled(true);
