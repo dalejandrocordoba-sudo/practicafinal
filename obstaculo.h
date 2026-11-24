@@ -5,6 +5,7 @@
 
 
 class obstaculo{
+
       private:
 
     int id;
