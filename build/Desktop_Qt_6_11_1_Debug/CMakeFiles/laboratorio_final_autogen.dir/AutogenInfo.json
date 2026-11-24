@@ -540,6 +540,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/evento.h",
+			"MU",
+			"EWIEGA46WW/moc_evento.cpp",
+			null
+		],
+		[
 			"/home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.h",
 			"MU",
 			"EWIEGA46WW/moc_gestorarchivos.cpp",
@@ -555,6 +561,24 @@
 			"/home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.h",
 			"MU",
 			"EWIEGA46WW/moc_juegowindow.cpp",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.h",
+			"MU",
+			"EWIEGA46WW/moc_motorfisico.cpp",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.h",
+			"MU",
+			"EWIEGA46WW/moc_obstaculo.cpp",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/particula.h",
+			"MU",
+			"EWIEGA46WW/moc_particula.cpp",
 			null
 		]
 	],
@@ -633,7 +657,27 @@
 			null
 		],
 		[
-			"/home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp",
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp",
 			"MU",
 			null
 		],

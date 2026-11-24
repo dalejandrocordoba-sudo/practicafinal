@@ -19,7 +19,7 @@ public:
 
     bool abrirtrayectoria(const std::string& ruta);
     void registrarpaso(double tiempo,
-                       const std::vector<Particula>& particulas, const std::vector<evento>& eventosdelpaso);
+                       const std::vector<particula>& particulas, const std::vector<evento>& eventosdelpaso);
     void cerrartrayectoria();
 
     static bool guardareventos(const std::string& ruta, const std::vector<evento>& eventos);

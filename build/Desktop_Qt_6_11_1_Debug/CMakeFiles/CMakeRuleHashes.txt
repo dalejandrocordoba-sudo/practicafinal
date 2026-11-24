@@ -1,3 +1,4 @@
 # Hashes of file build rules.
-b12c349a85ab058ade9f4083958465cc CMakeFiles/laboratorio_final_autogen
+b12c349a85ab058ade9f4083958465cc CMakeFiles/JuegoEstrategia_autogen
+529adb7ce59de7c53e319aae96accd08 JuegoEstrategia_autogen/timestamp
 0b1aa34ee5b320bf9d3f98aec13c3955 laboratorio_final_autogen/timestamp

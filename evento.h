@@ -6,13 +6,13 @@
 enum class tipoevento
 {
 
-    PARED_IZQUIERDA,
-    PARED_DERECHA,
-    PISO,
-    TECHO,
-    OBSTACULO,
-    FUSION,
-    OBSTACULO_DESTRUIDO
+    pared_izquierda,
+    pared_derecha,
+    piso,
+    techo,
+    obstaculo,
+    fusion,
+    obstaculo_destruido
 
 };
 
@@ -20,13 +20,13 @@ inline std::string nombreevento(tipoevento t){
 
     switch (t) {
 
-    case tipoevento::PARED_IZQUIERDA:    return "PARED_IZQUIERDA";
-    case tipoevento::PARED_DERECHA:      return "PARED_DERECHA";
-    case tipoevento::PISO:               return "PISO";
-    case tipoevento::TECHO:              return "TECHO";
-    case tipoevento::OBSTACULO:          return "OBSTACULO";
-    case tipoevento::FUSION:             return "FUSION";
-    case tipoevento::OBSTACULO_DESTRUIDO:return "OBSTACULO_DESTRUIDO";
+    case tipoevento::pared_izquierda:    return "PARED_IZQUIERDA";
+    case tipoevento::pared_derecha:      return "PARED_DERECHA";
+    case tipoevento::piso:               return "PISO";
+    case tipoevento::techo:              return "TECHO";
+    case tipoevento::obstaculo:          return "OBSTACULO";
+    case tipoevento::fusion:             return "FUSION";
+    case tipoevento::obstaculo_destruido:return "OBSTACULO_DESTRUIDO";
 
     }
 

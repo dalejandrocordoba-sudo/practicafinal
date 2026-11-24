@@ -13,7 +13,11 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/sebastian/tareas-informatica-2/laboratorio_final/juegologica.cpp" "CMakeFiles/laboratorio_final.dir/juegologica.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/juegologica.cpp.o.d"
   "/home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.cpp" "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o.d"
   "/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/laboratorio_final_autogen/mocs_compilation.cpp" "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o.d"
-  "/home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp" "CMakeFiles/laboratorio_final.dir/main.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/main.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp" "CMakeFiles/laboratorio_final.dir/main_consola.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/main_consola.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp" "CMakeFiles/laboratorio_final.dir/main_qt.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/main_qt.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp" "CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp" "CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o.d"
+  "/home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp" "CMakeFiles/laboratorio_final.dir/particula.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/particula.cpp.o.d"
   "/home/sebastian/tareas-informatica-2/laboratorio_final/test_juego.cpp" "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o" "gcc" "CMakeFiles/laboratorio_final.dir/test_juego.cpp.o.d"
   )
 

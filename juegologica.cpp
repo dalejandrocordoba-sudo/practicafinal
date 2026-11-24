@@ -10,8 +10,8 @@ inline double arad(double g) { return g * pi / 180.0; }
 }
 
 juegologica::juegologica()
-    : motor(ancho,alto,gravedad,factor_daño),
-    estado(Estado::esperando), turno(1),ganador(0),
+    : motor(ancho,alto,gravedad,factordano),
+    estado(estado::esperando), turno(1),ganador(0),
     lanzamientos(0),tiempovuelo(0.0) {
     construirescenario();
 }
@@ -19,7 +19,7 @@ juegologica::juegologica()
 
 void juegologica::reiniciar() {
     motor = motorfisico(ancho,alto,gravedad,factordano);
-    estado = Estado::esperando;
+    estado = estado::esperando;
     turno = 1;
     ganador = 0;
     tiempovuelo = 0.0;
@@ -61,7 +61,7 @@ double juegologica::rivalx(int jugador) {
 
 double juegologica::bocax( int jugador, double angulogrados) {
     const double d = largo_cañon * std::cos(arad(angulogrados));
-    return jugador ==1 ? cañon_x +d : (ancho - cañon_x) - d;
+    return jugador ==1 ? cañon_x + d : (ancho - cañon_x) - d;
 }
 double juegologica::bocay(double angulogrados) {
     return cañon_y + largo_cañon * std::sin(arad(angulogrados));
@@ -108,7 +108,7 @@ void juegologica::avanzar(double segundos) {
         for (const auto& e : motor.geteventospaso()) {
             std::ostringstream os;
 
-            if (e.tipo == tipoevento::OBSTACULO && e.valor > 0.0) {
+            if (e.tipo == tipoevento::obstaculo && e.valor > 0.0) {
                 const obstaculo& o =motor.getobstaculos()[e.id2 - 1];
                 os << "¡"<< o.getnombre() << " del jugador " << o.getpropietario()
                    <<": -" << static_cast<int>(std::lround(e.valor))
@@ -124,7 +124,7 @@ void juegologica::avanzar(double segundos) {
             const double rs = ps [0].getradio() + radio_rival;
             if(dx *dx +dy * dy <= rs * rs) {
                 ganador = turno;
-                estado = Estado::terminado;
+                estado = estado::terminado;
                 mensaje = "el jugador " + std::to_string(turno) + " ha eliminado al rival ";
                 return;
             }

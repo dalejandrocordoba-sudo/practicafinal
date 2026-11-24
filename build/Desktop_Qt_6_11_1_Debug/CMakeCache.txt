@@ -306,6 +306,15 @@ OPENGL_opengl_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libOpenGL.so
 //Path to a file.
 OPENGL_xmesa_INCLUDE_DIR:PATH=OPENGL_xmesa_INCLUDE_DIR-NOTFOUND
 
+//Value Computed by CMake
+Practica5Informatica2_BINARY_DIR:STATIC=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug
+
+//Value Computed by CMake
+Practica5Informatica2_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Practica5Informatica2_SOURCE_DIR:STATIC=/home/sebastian/tareas-informatica-2/laboratorio_final
+
 //Additional directories where find(Qt6 ...) host Qt components
 // are searched
 QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=

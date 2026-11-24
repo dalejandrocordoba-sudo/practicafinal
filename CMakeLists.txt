@@ -1,71 +1,55 @@
 cmake_minimum_required(VERSION 3.16)
-
-project(laboratorio_final VERSION 0.1 LANGUAGES CXX)
-
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+project(laboratorio_final LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+add_library(motor STATIC
+    evento.h
+    particula.h
+    particula.cpp
+    obstaculo.h
+    obstaculo.cpp
+    motorfisico.h
+    motorfisico.cpp
+    gestorarchivos.h
+    gestorarchivos.cpp
+)
+target_include_directories(motor PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-set(PROJECT_SOURCES
-        main.cpp
-        juegowindow.cpp
+add_library(juego STATIC
+    juegologica.h
+    juegologica.cpp
+)
+target_include_directories(juego PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(juego PUBLIC motor)
+
+add_executable(SimulacionConsola
+    main_consola.cpp
+)
+target_link_libraries(SimulacionConsola PRIVATE motor)
+
+enable_testing()
+add_executable(test_juego
+    test_juego.cpp
+)
+target_link_libraries(test_juego PRIVATE juego)
+add_test(NAME motor_y_juego COMMAND test_juego)
+
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets QUIET)
+if(QT_FOUND)
+    find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
+    set(CMAKE_AUTOUIC ON)
+    set(CMAKE_AUTOMOC ON)
+    set(CMAKE_AUTORCC ON)
+
+    add_executable(JuegoEstrategia
+        main_qt.cpp
         juegowindow.h
+        juegowindow.cpp
         juegowindow.ui
-        juegologica.h
-        juegologica.cpp
-        gestorarchivos.h
-        gestorarchivos.cpp
-        particula.h
-        particula.cpp
-        simulacion.h
-        simulacion.cpp
-        test_juego.cpp
-)
-
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(laboratorio_final
-        MANUAL_FINALIZATION
-        ${PROJECT_SOURCES}
-        evento.h motorfisico.cpp motorfisico.h obstaculo.cpp obstaculo.h
     )
+    target_link_libraries(JuegoEstrategia PRIVATE juego Qt${QT_VERSION_MAJOR}::Widgets)
 else()
-    if(ANDROID)
-        add_library(laboratorio_final SHARED
-            ${PROJECT_SOURCES}
-        )
-    else()
-        add_executable(laboratorio_final
-            ${PROJECT_SOURCES}
-        )
-    endif()
-endif()
-
-target_link_libraries(laboratorio_final PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
-
-if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.laboratorio_final)
-endif()
-set_target_properties(laboratorio_final PROPERTIES
-    ${BUNDLE_ID_OPTION}
-    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
-    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
-    MACOSX_BUNDLE TRUE
-    WIN32_EXECUTABLE TRUE
-)
-
-include(GNUInstallDirs)
-install(TARGETS laboratorio_final
-    BUNDLE DESTINATION .
-    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
-    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
-)
-
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(laboratorio_final)
+    message(WARNING "Qt no encontrado: se compilan solo la simulación de consola y las pruebas.")
 endif()

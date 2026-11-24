@@ -3,10 +3,10 @@
 #include <cmath>
 
 motorfisico::motorfisico(double ancho, double alto, double g, double factordano)
-    :anchoesenario(ancho), altoesenario(alto), gravedad(g),
+    :anchoescenario(ancho), altoescenario(alto), gravedad(g),
     factordano(factordano), tiempo(0.0){}
 
-void motorfisico::agregarparticula(const Particula &p) {particulas.push_back(p);}
+void motorfisico::agregarparticula(const particula &p) {particulas.push_back(p);}
 void motorfisico::agregarobstaculo(const obstaculo &obs){obstaculos.push_back(obs);}
 void motorfisico::limpiarparticulas(){particulas.clear();}
 
@@ -65,7 +65,7 @@ void motorfisico::resolvercolisionesparedes(particula& p) {
 // obstáculos: inelásticas. v'_perp = -e v_perp ; v'_par = v_par  y  se determina explícitamente con qué lado del rectángulo se choca
 
 
-void motorfisico::resolvercolisionesobstaculos(Particula& p) {
+void motorfisico::resolvercolisionesobstaculos(particula& p) {
     if (!p.isactiva()) return;
     const double umbral_impacto = 0.5;  // m/s: por debajo no se registra impacto
 

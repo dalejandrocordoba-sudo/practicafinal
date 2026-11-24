@@ -24,14 +24,14 @@ void gestorarchivos::registrarpaso(double tiempo, const std::vector<particula>& 
         for ( const auto& e: eventosdelpaso) {
 
             const bool participa = (e.id1 == p.getid()) ||
-                                   (e.tipo == tipoevento::FUSION && e.id2 == p.getid());
+                                   (e.tipo == tipoevento::fusion && e.id2 == p.getid());
             if (!participa) continue;
             if (!ev.empty()) ev += "+";
             ev += nombreevento(e.tipo);
         }
         if (ev.empty()) ev = "-";
 
-        salidatrayectoria << tiempo << ','<<p.getId() << ','
+        salidatrayectoria << tiempo << ','<<p.getid() << ','
                           << p.getx() << ','<<p.gety()<< ','
                           << p.getvx() << ','<<p.getvy() << ','
                           << p.getmasa() << ',' << p.getradio()<< ','

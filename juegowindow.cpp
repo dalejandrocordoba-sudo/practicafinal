@@ -34,33 +34,33 @@ juegowindow::juegowindow(QWidget *parent)
 
     timer = new QTimer(this);
     timer->setInterval(16);
-    connect(timer, &QTimer::timeout,ehis, &juegowindow::tick);
+    connect(timer, &QTimer::timeout,this, &juegowindow::tick);
 }
 
 void juegowindow::construirui() {
     QWidget* central = new QWidget(this);
-    QVBoxLayout* principal = new QVBoxlayout(central);
+    QVBoxLayout* principal = new QVBoxLayout(central);
 
-    escena = new QGraphicsScene(0,0, px(juegologica::ANCHO), px (juegologica::alto), this);
+    escena = new QGraphicsScene(0,0, px(juegologica::ancho), px (juegologica::alto), this);
     vista = new QGraphicsView (escena,central);
     vista->setRenderHint(QPainter::Antialiasing);
     vista->setFixedSize(static_cast<int>(px(juegologica::ancho))+4,
                         static_cast<int>(px(juegologica::alto))+ 4);
     lblturno = new QLabel(central);
-    QFont f = lblTurno->font();
+    QFont f = lblturno->font();
     f.setBold(true);
     f.setPointSize(12);
-    lblTurno->setfont(f);
+    lblturno->setFont(f);
 
     spinangulo = new QDoubleSpinBox(central);
-    spinangulo->setrange(0.0,90.0);4
-        spinangulo->setvalue(45.0);
+    spinangulo->setRange(0.0,90.0);
+        spinangulo->setValue(45.0);
     spinangulo->setSuffix(" °");
 
-    spinvelocidad = new QDoublespinbox(central);
-    spinvelocidad->setrange(5.0, 100.0);
-    spinvelocidad->setvalue(45.0);
-    spinvelocidad->setsuffix("m/s");
+    spinvelocidad = new QDoubleSpinBox(central);
+    spinvelocidad->setRange(5.0, 100.0);
+    spinvelocidad->setValue(45.0);
+    spinvelocidad->setSuffix("m/s");
 
     btnlanzar = new QPushButton("lanzar proyectil", central);
     btnreiniciar = new QPushButton("reiniciar", central);
@@ -75,9 +75,9 @@ void juegowindow::construirui() {
     controles->addWidget(spinvelocidad);
     controles->addWidget(btnlanzar);
     controles->addWidget(btnreiniciar);
-    controles->addWidget(vista);
-    controles->addLayout(controles);
-    controles->addWidget(lblmensaje);
+    principal->addLayout(controles);
+    principal->addWidget(vista);
+    principal->addWidget(lblmensaje);
     setCentralWidget(central);
     setWindowTitle("juego de estrategia por turnos ");
 
@@ -121,8 +121,8 @@ void juegowindow::construirescena() {
 
     for (int j = 1; j<= 2 ; ++j){
         const QColor color = (j==1) ? QColor(30,90,200) : QColor(200,40,40);
-        const double cx = px(juegologica::canonx(j));
-        const double cy = py(juegologica::canon_y);
+        const double cx = px(juegologica::cañonx(j));
+        const double cy = py(juegologica::cañon_y);
         const double rep = px(8.0);
         const double xrep = (j == 1) ? 0.0 : px(juegologica::ancho) - rep;
         escena->addRect(xrep, cy + 6,rep,4, QPen(Qt::black),QBrush(Qt::white));
@@ -142,7 +142,7 @@ void juegowindow::construirescena() {
         QFont ft("Arial", 10);
         ft.setBold(true);
         t->setFont(ft);
-        t-setZValue(3);
+        t->setZValue(3);
         textoobstaculos.push_back(t);
     }
     dibujarrival(1);
@@ -166,17 +166,17 @@ void juegowindow::actualizarobstaculos() {
     const auto& obs = logica.getmotor().getobstaculos();
     for (size_t i = 0; i< obs.size() && i < rectobstaculos.size(); ++i) {
         if (obs [i].isdestruido()) {
-            rectobstaculos[i]setVisible(false);
+            rectobstaculos[i]->setVisible(false);
             textoobstaculos[i]->setVisible(false);
             continue;
         }
-        QColcor c = rectobstaculos[i]->data(0).value<QColor>();
+        QColor c = rectobstaculos[i]->data(0).value<QColor>();
         c.setAlpha(static_cast<int>(90+165*obs[i].fraccionresistencia()));
         rectobstaculos[i]->setBrush(QBrush(c));
 
-        textoobstaculos[i]->settext(QString::number(static_cast<int>(std::ceil(bs[i].getresistenciaactual()))));
-        const QRectF br = textoobstaculos[i]->boundingrect();
-        textoobstaculos[i]-setpos(px(obs[i].getx() +obs [i].getancho()/ 2.0)-br.width() / 2.0,
+        textoobstaculos[i]->setText(QString::number(static_cast<int>(std::ceil(obs[i].getresistenciaactual()))));
+        const QRectF br = textoobstaculos[i]->boundingRect();
+        textoobstaculos[i]->setPos(px(obs[i].getx() +obs [i].getancho()/ 2.0)-br.width() / 2.0,
                                     py(obs[i].gety() + obs[i].getalto()/2.0)- br.height()/2.0);
 
         }
@@ -188,8 +188,18 @@ void juegowindow::actualizarturno(){
 }
 
 void juegowindow::actualizarapuntado() {
-    if (!logica.lanzar(spinangulo->value(),spinvelocidad->value(),spinvelocidad->()))
-        return;
+    if (!apuntadoitem) return;
+    const int j = logica.getturno();
+    const double ang = spinangulo->value();
+    const double x0 = juegologica::cañonx(j);
+    apuntadoitem->setLine(px(x0), py(juegologica::cañon_y),
+                          px(juegologica::bocax(j, ang)), py(juegologica::bocay(ang)));
+    apuntadoitem->setVisible(logica.getestado() == juegologica::estado::esperando);
+
+}
+
+void juegowindow::lanzarproyectil() {
+    if (!logica.lanzar(spinangulo->value(),spinvelocidad->value())) return;
 
     const auto& p = logica.getmotor().getparticulas().front();
     trayectoria = QPainterPath(QPointF(px(p.getx()),py(p.gety())));
@@ -199,7 +209,7 @@ void juegowindow::actualizarapuntado() {
     apuntadoitem->setVisible(false);
 
     btnlanzar->setEnabled(false);
-    lblmensaje->setText(QString::fromStdString(logica.getMensaje()));
+    lblmensaje->setText(QString::fromStdString(logica.getmensaje()));
     timer->start();
 
 }
@@ -209,21 +219,21 @@ void juegowindow::tick() {
 
     const auto& ps = logica.getmotor().getparticulas();
     if(!ps.empty() && ps[0].isactiva()) {
-        const QPintF pos(px(ps[0].getx()),py(ps[0].gety()));
+        const QPointF pos(px(ps[0].getx()),py(ps[0].gety()));
         proyectilitem->setPos(pos);
         trayectoria.lineTo(pos);
         trayectoriaitem->setPath(trayectoria);
     }
     actualizarobstaculos();
-    lblmensaje->setText(QString::fromStdString(logica.getMensaje()));
+    lblmensaje->setText(QString::fromStdString(logica.getmensaje()));
 
 
-    if(logica.getEstado() == juegologica::estado::terminado) {
+    if(logica.getestado() == juegologica::estado::terminado) {
         timer->stop();
         QMessageBox::information(this,"¡victoria!",
             QString("el jugador %1 ha eliminado al representante enemigo.").arg(logica.getganador()));
         reiniciarjuego();
-    } else if (logica.getEstado() == juegologica::estado::esperando) {
+    } else if (logica.getestado() == juegologica::estado::esperando) {
             timer->stop();
             proyectilitem->setVisible(false);
             btnlanzar->setEnabled(true);

@@ -387,7 +387,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/laboratorio_final_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/JuegoEstrategia_autogen.dir/AutogenInfo.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -395,7 +395,11 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/laboratorio_final.dir/DependInfo.cmake"
-  "CMakeFiles/laboratorio_final_autogen_timestamp_deps.dir/DependInfo.cmake"
-  "CMakeFiles/laboratorio_final_autogen.dir/DependInfo.cmake"
+  "CMakeFiles/motor.dir/DependInfo.cmake"
+  "CMakeFiles/juego.dir/DependInfo.cmake"
+  "CMakeFiles/SimulacionConsola.dir/DependInfo.cmake"
+  "CMakeFiles/test_juego.dir/DependInfo.cmake"
+  "CMakeFiles/JuegoEstrategia.dir/DependInfo.cmake"
+  "CMakeFiles/JuegoEstrategia_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "CMakeFiles/JuegoEstrategia_autogen.dir/DependInfo.cmake"
   )

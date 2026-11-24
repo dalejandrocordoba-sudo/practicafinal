@@ -15,9 +15,9 @@ public:
     static constexpr double masa_proyectil =2.0;
     static constexpr double radio_proyectil =1.2;
     static constexpr double factordano = 0.5;
-    static constexpr double canon_x = 4.0;
-    static constexpr double canon_y = 58.0;
-    static constexpr double largo_canon = 6.0;
+    static constexpr double cañon_x = 4.0;
+    static constexpr double cañon_y = 58.0;
+    static constexpr double largo_cañon = 6.0;
     static constexpr double pilar_ancho = 14.0;
     static constexpr double pilar_alto = 30.0;
     static constexpr double tejado_alto = 15.0;
@@ -29,12 +29,12 @@ public:
     static constexpr double dt = 0.005;
     static constexpr double tiempo_max_turno = 8.0;
 
-    enum class Estado { esperando,en_vuelo, terminado };
+    enum class estado { esperando,en_vuelo, terminado };
 
 
 private:
     motorfisico motor;
-    Estado estado;
+    estado estado;
     int turno;
     int ganador;
     int lanzamientos;
@@ -54,7 +54,7 @@ public:
 
     void avanzar(double segundos);
 
-    estado getestado() const { return estado; }
+    enum estado getestado() const { return  estado; }
     int getturno() const { return turno; }
     int getganador() const { return ganador; }
     const std::string& getmensaje() const {return mensaje;}
@@ -65,7 +65,7 @@ public:
     static double bocay(double angulogrados);
     static double rivalx(int jugador);
     static double rivaly() {return radio_rival; }
-    static double cañonx (int jugador) {return jugador == 1 ? canon_x : ancho - canon_x; }
+    static double cañonx (int jugador) {return jugador == 1 ? cañon_x : ancho - cañon_x; }
 };
 
 #endif // JUEGOLOGICA_H

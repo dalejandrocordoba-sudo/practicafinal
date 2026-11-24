@@ -1,9 +1,6 @@
 #include <iostream>
 #include <limits>
 #include <map>
-#include <vector>
-#include <string>
-#include "particula.h"
 #include "motorfisico.h"
 #include "gestorarchivos.h"
 
@@ -43,12 +40,12 @@ int main()
 
 
 
-    motor.agregarparticula(Particula(1,  5.0, 30.0,  38.0,  8.0, 2.0, 1.6));
-    motor.agregarparticula(Particula(2, 95.0, 40.0, -34.0,  6.0, 3.0, 1.9));
-    motor.agregarparticula(Particula(3, 50.0, 52.0,  14.0, -4.0, 1.5, 1.4));
-    motor.agregarparticula(Particula(4, 30.0,  5.0, -27.0, 25.0, 2.5, 1.7));
-    motor.agregarparticula(Particula(5, 60.0, 15.0, -30.0, 18.0, 1.0, 1.2));
-    motor.agregarparticula(Particula(6, 15.0, 22.0,  29.0, -2.0, 1.8, 1.5));
+    motor.agregarparticula(particula(1,  5.0, 30.0,  38.0,  8.0, 2.0, 1.6));
+    motor.agregarparticula(particula(2, 95.0, 40.0, -34.0,  6.0, 3.0, 1.9));
+    motor.agregarparticula(particula(3, 50.0, 52.0,  14.0, -4.0, 1.5, 1.4));
+    motor.agregarparticula(particula(4, 30.0,  5.0, -27.0, 25.0, 2.5, 1.7));
+    motor.agregarparticula(particula(5, 60.0, 15.0, -30.0, 18.0, 1.0, 1.2));
+    motor.agregarparticula(particula(6, 15.0, 22.0,  29.0, -2.0, 1.8, 1.5));
 
 
     gestorarchivos gestor;
@@ -82,7 +79,7 @@ int main()
 
     std::cout << "\nFusiones (instante, particulas, masa resultante):\n";
     for (const auto& e : motor.gethistorial())
-        if (e.tipo == tipoevento::FUSION)
+        if (e.tipo == tipoevento::fusion)
             std::cout << "  t=" << e.tiempo << " s  P" << e.id1 << " + P" << e.id2
                       << "  -> M=" << e.valor << " kg\n";
 

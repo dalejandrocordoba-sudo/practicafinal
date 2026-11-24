@@ -9,14 +9,14 @@
 class motorfisico{
 
 private:
-    double anchoesenario;
-    double altoesenario;
+    double anchoescenario;
+    double altoescenario;
     double gravedad;
     double factordano;  // dano= factorDano * masa |velocidad de impacto|
     double tiempo;
 
 
-    std::vector<Particula> particulas;
+    std::vector<particula> particulas;
     std::vector<obstaculo> obstaculos;
     std::vector<evento> eventospaso;   // eventos del último paso
     std::vector<evento> historial;     // todos los eventos
@@ -27,7 +27,7 @@ private:
 public:
     motorfisico(double ancho, double alto, double g = 9.81, double factordano = 0.5);
 
-    void agregarparticula(const Particula& p);
+    void agregarparticula(const particula& p);
     void agregarobstaculo(const obstaculo& obs);
 
     void limpiarparticulas();
@@ -39,21 +39,21 @@ public:
 
     void pasosimulacion(double dt);
 
-    void resolvercolisionesparedes(Particula& p);
-    void resolvercolisionesobstaculos(Particula& p);
+    void resolvercolisionesparedes(particula& p);
+    void resolvercolisionesobstaculos(particula& p);
     void resolvercolisionesparticulas();
 
     double gettiempo() const { return tiempo; }
-    double getancho() const { return anchoesenario; }
-    double getalto() const { return altoesenario; }
+    double getancho() const { return anchoescenario; }
+    double getalto() const { return altoescenario; }
     double getgravedad() const { return gravedad; }
     double getfactorDano() const { return factordano; }
 
-    std::vector<Particula>& getparticulas() { return particulas; }
-    const std::vector<Particula>& getparticulas() const { return particulas; }
+    std::vector<particula>& getparticulas() { return particulas; }
+    const std::vector<particula>& getparticulas() const { return particulas; }
     std::vector<obstaculo>& getobstaculos() { return obstaculos; }
     const std::vector<obstaculo>& getobstaculos() const { return obstaculos; }
-    std::vector<evento>& geteventospaso() const { return eventosPaso; }
+    const std::vector<evento>& geteventospaso() const { return eventospaso; }
     const std::vector<evento>& gethistorial() const { return historial; }
 
 

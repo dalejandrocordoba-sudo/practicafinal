@@ -90,19 +90,19 @@ CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/laboratorio_final_autogen/mocs_compilation.cpp -o CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/laboratorio_final.dir/main.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
-CMakeFiles/laboratorio_final.dir/main.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp
-CMakeFiles/laboratorio_final.dir/main.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/laboratorio_final.dir/main.cpp.o"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/main.cpp.o -MF CMakeFiles/laboratorio_final.dir/main.cpp.o.d -o CMakeFiles/laboratorio_final.dir/main.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp
+CMakeFiles/laboratorio_final.dir/main_consola.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/main_consola.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp
+CMakeFiles/laboratorio_final.dir/main_consola.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/laboratorio_final.dir/main_consola.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/main_consola.cpp.o -MF CMakeFiles/laboratorio_final.dir/main_consola.cpp.o.d -o CMakeFiles/laboratorio_final.dir/main_consola.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp
 
-CMakeFiles/laboratorio_final.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/main.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp > CMakeFiles/laboratorio_final.dir/main.cpp.i
+CMakeFiles/laboratorio_final.dir/main_consola.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/main_consola.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp > CMakeFiles/laboratorio_final.dir/main_consola.cpp.i
 
-CMakeFiles/laboratorio_final.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/main.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/main.cpp -o CMakeFiles/laboratorio_final.dir/main.cpp.s
+CMakeFiles/laboratorio_final.dir/main_consola.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/main_consola.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/main_consola.cpp -o CMakeFiles/laboratorio_final.dir/main_consola.cpp.s
 
 CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
 CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.cpp
@@ -118,24 +118,10 @@ CMakeFiles/laboratorio_final.dir/juegowindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/juegowindow.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/juegowindow.cpp -o CMakeFiles/laboratorio_final.dir/juegowindow.cpp.s
 
-CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
-CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp
-CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o -MF CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o.d -o CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp
-
-CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp > CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i
-
-CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp -o CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s
-
 CMakeFiles/laboratorio_final.dir/juegologica.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
 CMakeFiles/laboratorio_final.dir/juegologica.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/juegologica.cpp
 CMakeFiles/laboratorio_final.dir/juegologica.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/laboratorio_final.dir/juegologica.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/laboratorio_final.dir/juegologica.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/juegologica.cpp.o -MF CMakeFiles/laboratorio_final.dir/juegologica.cpp.o.d -o CMakeFiles/laboratorio_final.dir/juegologica.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/juegologica.cpp
 
 CMakeFiles/laboratorio_final.dir/juegologica.cpp.i: cmake_force
@@ -146,10 +132,38 @@ CMakeFiles/laboratorio_final.dir/juegologica.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/juegologica.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/juegologica.cpp -o CMakeFiles/laboratorio_final.dir/juegologica.cpp.s
 
+CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp
+CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o -MF CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o.d -o CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp
+
+CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp > CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i
+
+CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/gestorarchivos.cpp -o CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s
+
+CMakeFiles/laboratorio_final.dir/particula.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/particula.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp
+CMakeFiles/laboratorio_final.dir/particula.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laboratorio_final.dir/particula.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/particula.cpp.o -MF CMakeFiles/laboratorio_final.dir/particula.cpp.o.d -o CMakeFiles/laboratorio_final.dir/particula.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp
+
+CMakeFiles/laboratorio_final.dir/particula.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/particula.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp > CMakeFiles/laboratorio_final.dir/particula.cpp.i
+
+CMakeFiles/laboratorio_final.dir/particula.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/particula.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/particula.cpp -o CMakeFiles/laboratorio_final.dir/particula.cpp.s
+
 CMakeFiles/laboratorio_final.dir/test_juego.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
 CMakeFiles/laboratorio_final.dir/test_juego.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/test_juego.cpp
 CMakeFiles/laboratorio_final.dir/test_juego.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/laboratorio_final.dir/test_juego.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/laboratorio_final.dir/test_juego.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/test_juego.cpp.o -MF CMakeFiles/laboratorio_final.dir/test_juego.cpp.o.d -o CMakeFiles/laboratorio_final.dir/test_juego.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/test_juego.cpp
 
 CMakeFiles/laboratorio_final.dir/test_juego.cpp.i: cmake_force
@@ -160,24 +174,74 @@ CMakeFiles/laboratorio_final.dir/test_juego.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/test_juego.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/test_juego.cpp -o CMakeFiles/laboratorio_final.dir/test_juego.cpp.s
 
+CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp
+CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o -MF CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o.d -o CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp
+
+CMakeFiles/laboratorio_final.dir/motorfisico.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/motorfisico.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp > CMakeFiles/laboratorio_final.dir/motorfisico.cpp.i
+
+CMakeFiles/laboratorio_final.dir/motorfisico.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/motorfisico.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/motorfisico.cpp -o CMakeFiles/laboratorio_final.dir/motorfisico.cpp.s
+
+CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp
+CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o -MF CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o.d -o CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp
+
+CMakeFiles/laboratorio_final.dir/obstaculo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/obstaculo.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp > CMakeFiles/laboratorio_final.dir/obstaculo.cpp.i
+
+CMakeFiles/laboratorio_final.dir/obstaculo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/obstaculo.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/obstaculo.cpp -o CMakeFiles/laboratorio_final.dir/obstaculo.cpp.s
+
+CMakeFiles/laboratorio_final.dir/main_qt.cpp.o: CMakeFiles/laboratorio_final.dir/flags.make
+CMakeFiles/laboratorio_final.dir/main_qt.cpp.o: /home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp
+CMakeFiles/laboratorio_final.dir/main_qt.cpp.o: CMakeFiles/laboratorio_final.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/laboratorio_final.dir/main_qt.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/laboratorio_final.dir/main_qt.cpp.o -MF CMakeFiles/laboratorio_final.dir/main_qt.cpp.o.d -o CMakeFiles/laboratorio_final.dir/main_qt.cpp.o -c /home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp
+
+CMakeFiles/laboratorio_final.dir/main_qt.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/laboratorio_final.dir/main_qt.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp > CMakeFiles/laboratorio_final.dir/main_qt.cpp.i
+
+CMakeFiles/laboratorio_final.dir/main_qt.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/laboratorio_final.dir/main_qt.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sebastian/tareas-informatica-2/laboratorio_final/main_qt.cpp -o CMakeFiles/laboratorio_final.dir/main_qt.cpp.s
+
 # Object files for target laboratorio_final
 laboratorio_final_OBJECTS = \
 "CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/laboratorio_final.dir/main.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/main_consola.cpp.o" \
 "CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o" \
-"CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o" \
 "CMakeFiles/laboratorio_final.dir/juegologica.cpp.o" \
-"CMakeFiles/laboratorio_final.dir/test_juego.cpp.o"
+"CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/particula.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/test_juego.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o" \
+"CMakeFiles/laboratorio_final.dir/main_qt.cpp.o"
 
 # External object files for target laboratorio_final
 laboratorio_final_EXTERNAL_OBJECTS =
 
 laboratorio_final: CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o
-laboratorio_final: CMakeFiles/laboratorio_final.dir/main.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/main_consola.cpp.o
 laboratorio_final: CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o
-laboratorio_final: CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o
 laboratorio_final: CMakeFiles/laboratorio_final.dir/juegologica.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/particula.cpp.o
 laboratorio_final: CMakeFiles/laboratorio_final.dir/test_juego.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/motorfisico.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/obstaculo.cpp.o
+laboratorio_final: CMakeFiles/laboratorio_final.dir/main_qt.cpp.o
 laboratorio_final: CMakeFiles/laboratorio_final.dir/build.make
 laboratorio_final: /home/sebastian/Qt/6.11.1/gcc_64/lib/libQt6Widgets.so.6.11.1
 laboratorio_final: /home/sebastian/Qt/6.11.1/gcc_64/lib/libQt6Gui.so.6.11.1
@@ -185,7 +249,7 @@ laboratorio_final: /usr/lib/x86_64-linux-gnu/libGLX.so
 laboratorio_final: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 laboratorio_final: /home/sebastian/Qt/6.11.1/gcc_64/lib/libQt6Core.so.6.11.1
 laboratorio_final: CMakeFiles/laboratorio_final.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable laboratorio_final"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sebastian/tareas-informatica-2/laboratorio_final/build/Desktop_Qt_6_11_1_Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable laboratorio_final"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/laboratorio_final.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

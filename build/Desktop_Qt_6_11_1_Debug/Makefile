@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/sebastian/tareas-informatica-2/laboratorio_final/build/
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/home/sebastian/Qt/Tools/CMake/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,51 +94,6 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
-	/home/sebastian/Qt/Tools/CMake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -162,50 +127,126 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named laboratorio_final
+# Target rules for targets named motor
 
 # Build rule for target.
-laboratorio_final: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laboratorio_final
-.PHONY : laboratorio_final
+motor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motor
+.PHONY : motor
 
 # fast build rule for target.
-laboratorio_final/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/build
-.PHONY : laboratorio_final/fast
+motor/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/build
+.PHONY : motor/fast
 
 #=============================================================================
-# Target rules for targets named laboratorio_final_autogen_timestamp_deps
+# Target rules for targets named juego
 
 # Build rule for target.
-laboratorio_final_autogen_timestamp_deps: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laboratorio_final_autogen_timestamp_deps
-.PHONY : laboratorio_final_autogen_timestamp_deps
+juego: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 juego
+.PHONY : juego
 
 # fast build rule for target.
-laboratorio_final_autogen_timestamp_deps/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final_autogen_timestamp_deps.dir/build.make CMakeFiles/laboratorio_final_autogen_timestamp_deps.dir/build
-.PHONY : laboratorio_final_autogen_timestamp_deps/fast
+juego/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/build
+.PHONY : juego/fast
 
 #=============================================================================
-# Target rules for targets named laboratorio_final_autogen
+# Target rules for targets named SimulacionConsola
 
 # Build rule for target.
-laboratorio_final_autogen: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 laboratorio_final_autogen
-.PHONY : laboratorio_final_autogen
+SimulacionConsola: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SimulacionConsola
+.PHONY : SimulacionConsola
 
 # fast build rule for target.
-laboratorio_final_autogen/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final_autogen.dir/build.make CMakeFiles/laboratorio_final_autogen.dir/build
-.PHONY : laboratorio_final_autogen/fast
+SimulacionConsola/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimulacionConsola.dir/build.make CMakeFiles/SimulacionConsola.dir/build
+.PHONY : SimulacionConsola/fast
+
+#=============================================================================
+# Target rules for targets named test_juego
+
+# Build rule for target.
+test_juego: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_juego
+.PHONY : test_juego
+
+# fast build rule for target.
+test_juego/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_juego.dir/build.make CMakeFiles/test_juego.dir/build
+.PHONY : test_juego/fast
+
+#=============================================================================
+# Target rules for targets named JuegoEstrategia
+
+# Build rule for target.
+JuegoEstrategia: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JuegoEstrategia
+.PHONY : JuegoEstrategia
+
+# fast build rule for target.
+JuegoEstrategia/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/build
+.PHONY : JuegoEstrategia/fast
+
+#=============================================================================
+# Target rules for targets named JuegoEstrategia_autogen_timestamp_deps
+
+# Build rule for target.
+JuegoEstrategia_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JuegoEstrategia_autogen_timestamp_deps
+.PHONY : JuegoEstrategia_autogen_timestamp_deps
+
+# fast build rule for target.
+JuegoEstrategia_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia_autogen_timestamp_deps.dir/build.make CMakeFiles/JuegoEstrategia_autogen_timestamp_deps.dir/build
+.PHONY : JuegoEstrategia_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named JuegoEstrategia_autogen
+
+# Build rule for target.
+JuegoEstrategia_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JuegoEstrategia_autogen
+.PHONY : JuegoEstrategia_autogen
+
+# fast build rule for target.
+JuegoEstrategia_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia_autogen.dir/build.make CMakeFiles/JuegoEstrategia_autogen.dir/build
+.PHONY : JuegoEstrategia_autogen/fast
+
+JuegoEstrategia_autogen/mocs_compilation.o: JuegoEstrategia_autogen/mocs_compilation.cpp.o
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.o
+
+# target to build an object file
+JuegoEstrategia_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/JuegoEstrategia_autogen/mocs_compilation.cpp.o
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.cpp.o
+
+JuegoEstrategia_autogen/mocs_compilation.i: JuegoEstrategia_autogen/mocs_compilation.cpp.i
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+JuegoEstrategia_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/JuegoEstrategia_autogen/mocs_compilation.cpp.i
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.cpp.i
+
+JuegoEstrategia_autogen/mocs_compilation.s: JuegoEstrategia_autogen/mocs_compilation.cpp.s
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+JuegoEstrategia_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/JuegoEstrategia_autogen/mocs_compilation.cpp.s
+.PHONY : JuegoEstrategia_autogen/mocs_compilation.cpp.s
 
 gestorarchivos.o: gestorarchivos.cpp.o
 .PHONY : gestorarchivos.o
 
 # target to build an object file
 gestorarchivos.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/gestorarchivos.cpp.o
 .PHONY : gestorarchivos.cpp.o
 
 gestorarchivos.i: gestorarchivos.cpp.i
@@ -213,7 +254,7 @@ gestorarchivos.i: gestorarchivos.cpp.i
 
 # target to preprocess a source file
 gestorarchivos.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/gestorarchivos.cpp.i
 .PHONY : gestorarchivos.cpp.i
 
 gestorarchivos.s: gestorarchivos.cpp.s
@@ -221,7 +262,7 @@ gestorarchivos.s: gestorarchivos.cpp.s
 
 # target to generate assembly for a file
 gestorarchivos.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/gestorarchivos.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/gestorarchivos.cpp.s
 .PHONY : gestorarchivos.cpp.s
 
 juegologica.o: juegologica.cpp.o
@@ -229,7 +270,7 @@ juegologica.o: juegologica.cpp.o
 
 # target to build an object file
 juegologica.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/juegologica.cpp.o
 .PHONY : juegologica.cpp.o
 
 juegologica.i: juegologica.cpp.i
@@ -237,7 +278,7 @@ juegologica.i: juegologica.cpp.i
 
 # target to preprocess a source file
 juegologica.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/juegologica.cpp.i
 .PHONY : juegologica.cpp.i
 
 juegologica.s: juegologica.cpp.s
@@ -245,7 +286,7 @@ juegologica.s: juegologica.cpp.s
 
 # target to generate assembly for a file
 juegologica.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegologica.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/juego.dir/build.make CMakeFiles/juego.dir/juegologica.cpp.s
 .PHONY : juegologica.cpp.s
 
 juegowindow.o: juegowindow.cpp.o
@@ -253,7 +294,7 @@ juegowindow.o: juegowindow.cpp.o
 
 # target to build an object file
 juegowindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegowindow.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/juegowindow.cpp.o
 .PHONY : juegowindow.cpp.o
 
 juegowindow.i: juegowindow.cpp.i
@@ -261,7 +302,7 @@ juegowindow.i: juegowindow.cpp.i
 
 # target to preprocess a source file
 juegowindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegowindow.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/juegowindow.cpp.i
 .PHONY : juegowindow.cpp.i
 
 juegowindow.s: juegowindow.cpp.s
@@ -269,63 +310,135 @@ juegowindow.s: juegowindow.cpp.s
 
 # target to generate assembly for a file
 juegowindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/juegowindow.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/juegowindow.cpp.s
 .PHONY : juegowindow.cpp.s
 
-laboratorio_final_autogen/mocs_compilation.o: laboratorio_final_autogen/mocs_compilation.cpp.o
-.PHONY : laboratorio_final_autogen/mocs_compilation.o
+main_consola.o: main_consola.cpp.o
+.PHONY : main_consola.o
 
 # target to build an object file
-laboratorio_final_autogen/mocs_compilation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.o
-.PHONY : laboratorio_final_autogen/mocs_compilation.cpp.o
+main_consola.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimulacionConsola.dir/build.make CMakeFiles/SimulacionConsola.dir/main_consola.cpp.o
+.PHONY : main_consola.cpp.o
 
-laboratorio_final_autogen/mocs_compilation.i: laboratorio_final_autogen/mocs_compilation.cpp.i
-.PHONY : laboratorio_final_autogen/mocs_compilation.i
+main_consola.i: main_consola.cpp.i
+.PHONY : main_consola.i
 
 # target to preprocess a source file
-laboratorio_final_autogen/mocs_compilation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.i
-.PHONY : laboratorio_final_autogen/mocs_compilation.cpp.i
+main_consola.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimulacionConsola.dir/build.make CMakeFiles/SimulacionConsola.dir/main_consola.cpp.i
+.PHONY : main_consola.cpp.i
 
-laboratorio_final_autogen/mocs_compilation.s: laboratorio_final_autogen/mocs_compilation.cpp.s
-.PHONY : laboratorio_final_autogen/mocs_compilation.s
+main_consola.s: main_consola.cpp.s
+.PHONY : main_consola.s
 
 # target to generate assembly for a file
-laboratorio_final_autogen/mocs_compilation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/laboratorio_final_autogen/mocs_compilation.cpp.s
-.PHONY : laboratorio_final_autogen/mocs_compilation.cpp.s
+main_consola.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SimulacionConsola.dir/build.make CMakeFiles/SimulacionConsola.dir/main_consola.cpp.s
+.PHONY : main_consola.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+main_qt.o: main_qt.cpp.o
+.PHONY : main_qt.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/main.cpp.o
-.PHONY : main.cpp.o
+main_qt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/main_qt.cpp.o
+.PHONY : main_qt.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+main_qt.i: main_qt.cpp.i
+.PHONY : main_qt.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/main.cpp.i
-.PHONY : main.cpp.i
+main_qt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/main_qt.cpp.i
+.PHONY : main_qt.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+main_qt.s: main_qt.cpp.s
+.PHONY : main_qt.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/main.cpp.s
-.PHONY : main.cpp.s
+main_qt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/JuegoEstrategia.dir/build.make CMakeFiles/JuegoEstrategia.dir/main_qt.cpp.s
+.PHONY : main_qt.cpp.s
+
+motorfisico.o: motorfisico.cpp.o
+.PHONY : motorfisico.o
+
+# target to build an object file
+motorfisico.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/motorfisico.cpp.o
+.PHONY : motorfisico.cpp.o
+
+motorfisico.i: motorfisico.cpp.i
+.PHONY : motorfisico.i
+
+# target to preprocess a source file
+motorfisico.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/motorfisico.cpp.i
+.PHONY : motorfisico.cpp.i
+
+motorfisico.s: motorfisico.cpp.s
+.PHONY : motorfisico.s
+
+# target to generate assembly for a file
+motorfisico.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/motorfisico.cpp.s
+.PHONY : motorfisico.cpp.s
+
+obstaculo.o: obstaculo.cpp.o
+.PHONY : obstaculo.o
+
+# target to build an object file
+obstaculo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/obstaculo.cpp.o
+.PHONY : obstaculo.cpp.o
+
+obstaculo.i: obstaculo.cpp.i
+.PHONY : obstaculo.i
+
+# target to preprocess a source file
+obstaculo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/obstaculo.cpp.i
+.PHONY : obstaculo.cpp.i
+
+obstaculo.s: obstaculo.cpp.s
+.PHONY : obstaculo.s
+
+# target to generate assembly for a file
+obstaculo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/obstaculo.cpp.s
+.PHONY : obstaculo.cpp.s
+
+particula.o: particula.cpp.o
+.PHONY : particula.o
+
+# target to build an object file
+particula.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/particula.cpp.o
+.PHONY : particula.cpp.o
+
+particula.i: particula.cpp.i
+.PHONY : particula.i
+
+# target to preprocess a source file
+particula.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/particula.cpp.i
+.PHONY : particula.cpp.i
+
+particula.s: particula.cpp.s
+.PHONY : particula.s
+
+# target to generate assembly for a file
+particula.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motor.dir/build.make CMakeFiles/motor.dir/particula.cpp.s
+.PHONY : particula.cpp.s
 
 test_juego.o: test_juego.cpp.o
 .PHONY : test_juego.o
 
 # target to build an object file
 test_juego.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_juego.dir/build.make CMakeFiles/test_juego.dir/test_juego.cpp.o
 .PHONY : test_juego.cpp.o
 
 test_juego.i: test_juego.cpp.i
@@ -333,7 +446,7 @@ test_juego.i: test_juego.cpp.i
 
 # target to preprocess a source file
 test_juego.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_juego.dir/build.make CMakeFiles/test_juego.dir/test_juego.cpp.i
 .PHONY : test_juego.cpp.i
 
 test_juego.s: test_juego.cpp.s
@@ -341,7 +454,7 @@ test_juego.s: test_juego.cpp.s
 
 # target to generate assembly for a file
 test_juego.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/laboratorio_final.dir/build.make CMakeFiles/laboratorio_final.dir/test_juego.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_juego.dir/build.make CMakeFiles/test_juego.dir/test_juego.cpp.s
 .PHONY : test_juego.cpp.s
 
 # Help Target
@@ -351,14 +464,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... laboratorio_final_autogen"
-	@echo "... laboratorio_final_autogen_timestamp_deps"
-	@echo "... laboratorio_final"
+	@echo "... test"
+	@echo "... JuegoEstrategia_autogen"
+	@echo "... JuegoEstrategia_autogen_timestamp_deps"
+	@echo "... JuegoEstrategia"
+	@echo "... SimulacionConsola"
+	@echo "... juego"
+	@echo "... motor"
+	@echo "... test_juego"
+	@echo "... JuegoEstrategia_autogen/mocs_compilation.o"
+	@echo "... JuegoEstrategia_autogen/mocs_compilation.i"
+	@echo "... JuegoEstrategia_autogen/mocs_compilation.s"
 	@echo "... gestorarchivos.o"
 	@echo "... gestorarchivos.i"
 	@echo "... gestorarchivos.s"
@@ -368,12 +485,21 @@ help:
 	@echo "... juegowindow.o"
 	@echo "... juegowindow.i"
 	@echo "... juegowindow.s"
-	@echo "... laboratorio_final_autogen/mocs_compilation.o"
-	@echo "... laboratorio_final_autogen/mocs_compilation.i"
-	@echo "... laboratorio_final_autogen/mocs_compilation.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... main_consola.o"
+	@echo "... main_consola.i"
+	@echo "... main_consola.s"
+	@echo "... main_qt.o"
+	@echo "... main_qt.i"
+	@echo "... main_qt.s"
+	@echo "... motorfisico.o"
+	@echo "... motorfisico.i"
+	@echo "... motorfisico.s"
+	@echo "... obstaculo.o"
+	@echo "... obstaculo.i"
+	@echo "... obstaculo.s"
+	@echo "... particula.o"
+	@echo "... particula.i"
+	@echo "... particula.s"
 	@echo "... test_juego.o"
 	@echo "... test_juego.i"
 	@echo "... test_juego.s"
