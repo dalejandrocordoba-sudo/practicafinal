@@ -1,14 +1,20 @@
 #include "gestorarchivos.h"
 
+
+gestorarchivos::~gestorarchivos(){
+    cerrartrayectoria();
+}
+
 bool gestorarchivos::abrirtrayectoria(const std::string& ruta) {
     salidatrayectoria.open(ruta);
     if(!salidatrayectoria.is_open()) return false;
-    salidatrayectoria << "tiempo,id,x,y,vx,masa,radio,activa,evento\n";
+
+    salidatrayectoria << "tiempo,id,x,y,vx,vy,masa,radio,activa,evento\n";
     return true;
 }
 
 
-void gestorarchivos::registrarpaso(double tiemoo, const std::vector<particula>& particulas,
+void gestorarchivos::registrarpaso(double tiempo, const std::vector<particula>& particulas,
                                    const std::vector<evento>& eventosdelpaso) {
     if (!salidatrayectoria.is_open()) return;
 
@@ -16,8 +22,9 @@ void gestorarchivos::registrarpaso(double tiemoo, const std::vector<particula>& 
 
         std::string ev;
         for ( const auto& e: eventosdelpaso) {
+
             const bool participa = (e.id1 == p.getid()) ||
-                                   (e.tipo == tipoevento::fusion && e.id2 == p.getId());
+                                   (e.tipo == tipoevento::FUSION && e.id2 == p.getid());
             if (!participa) continue;
             if (!ev.empty()) ev += "+";
             ev += nombreevento(e.tipo);
@@ -53,7 +60,8 @@ bool gestorarchivos::guardarobstaculos(const std::string& ruta, const std::vecto
     if(!f.is_open()) return false;
     f<< "id,x,y,ancho,alto\n";
     for (const auto& o : obs)
-        f<< o.getId() << ',' << o getx() << ',' << o.gety() <<','
+
+        f<< o.getid() << ',' << o.getx() << ',' << o.gety() <<','
           << o.getancho() << ',' << o.getalto() << '\n';
     return true;
 }
