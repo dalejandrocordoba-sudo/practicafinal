@@ -18,12 +18,9 @@ public:
     Particula(int id, double x, double y, double vx, double vy,
               double masa, double radio, int lanzador = 0);
 
-    // x' = x + vx*dt ; y' = y + vy*dt - 1/2 g dt^2 ; vy' = vy - g*dt
+
     void actualizarposicion(double dt, double g);
 
-    // Colisión completamente inelástica: m1 v1 + m2 v2 = (m1+m2) v'
-    // La partícula resultante queda en el centro de masa y conserva
-    // el área total (r' = sqrt(r1^2 + r2^2)). 'otra' queda inactiva.
     void fusionarcon(Particula& otra);
 
     int getid() const { return id; }

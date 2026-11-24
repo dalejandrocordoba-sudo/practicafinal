@@ -21,7 +21,7 @@ void Particula::fusionarCon(Particula& otra) {
     vx = (masa * vx + otra.masa * otra.vx) / M;
     vy = (masa * vy + otra.masa * otra.vy) / M;
 
-    // Nueva posición: centro de masa
+    // centro de masa
     x = (masa * x + otra.masa * otra.x) / M;
     y = (masa * y + otra.masa * otra.y) / M;
 
