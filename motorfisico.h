@@ -53,7 +53,7 @@ public:
     const std::vector<Particula>& getparticulas() const { return particulas; }
     std::vector<obstaculo>& getobstaculos() { return obstaculos; }
     const std::vector<obstaculo>& getobstaculos() const { return obstaculos; }
-    const std::vector<evento>& geteventospaso() const { return eventospaso; }
+    std::vector<evento>& geteventospaso() const { return eventosPaso; }
     const std::vector<evento>& gethistorial() const { return historial; }
 
 
