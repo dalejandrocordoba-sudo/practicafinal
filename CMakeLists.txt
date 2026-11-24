@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(laboratorio_final
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        evento.h motorfisico.cpp motorfisico.h obstaculo.cpp obstaculo.h
     )
 else()
     if(ANDROID)
