@@ -11,25 +11,15 @@ inline double arad(double g) { return g * pi / 180.0; }
 
 juegologica::juegologica()
     : motor(ancho,alto,gravedad,factor_daño),
-    estado(estado::esperando), turno(1),ganador(0),
+    estado(Estado::esperando), turno(1),ganador(0),
     lanzamientos(0),tiempovuelo(0.0) {
     construirescenario();
 }
 
-void juegologica::reiniciar() {
-    motor = motorfisico(ancho,alto,gravedad,factor_daño);
-    estado = estado::esperando;
-    turno = 1;
-    ganador = 0;
-    lanzamientos = 0;
-    tiempovuelo = 0.0;
-    mensaje.clear();
-    cosntruir escenario();
-}
 
 void juegologica::reiniciar() {
-    motor = motorfisico(ancho,alto,gravedad,factor_daño);
-    estado = estado::esperando;
+    motor = motorfisico(ancho,alto,gravedad,factordano);
+    estado = Estado::esperando;
     turno = 1;
     ganador = 0;
     tiempovuelo = 0.0;
@@ -50,17 +40,18 @@ void juegologica::crearinfraestructura(int jugador) {
     const double xpilarder = x0 + pilar_ancho + hueco;
 
 
-    auto xespejo = [&] (double x, double ancho) {
-        return jugador == 1 ? x : ancho - (x + ancho);
+
+    auto xespejo = [&] (double x, double w) {
+        return jugador == 1 ? x : ancho - (x + w);
     };
 
     const int base = (jugador - 1 ) * 3;
     motor.agregarobstaculo(obstaculo(base + 1, xespejo(xpilarizq, pilar_ancho),0.0,
-                                     pilar_ancho,pilar_alto,res_pilar,0.5,jugador, "pilar"));
+                                     pilar_ancho,pilar_alto,res_pilar,0.5, jugador, "pilar"));
     motor.agregarobstaculo(obstaculo(base +2, xespejo(xpilarder,pilar_ancho), 0.0,
                                      pilar_ancho, pilar_alto, res_pilar, 0.5, jugador, "pilar"));
     motor.agregarobstaculo(obstaculo(base+ 3, xespejo (x0,anchototal), pilar_alto,
-                                     anchototal,tejado_alto,res_tejado,0,4, jugador, "tejado"));
+                                     anchototal,tejado_alto,res_tejado,0.4, jugador, "tejado"));
 }
 
 double juegologica::rivalx(int jugador) {
@@ -83,7 +74,8 @@ bool juegologica::lanzar(double angulogrados,double velocidad) {
     if (velocidad < 0.0) velocidad = 0.0;
 
     const double a = arad(angulogrados);
-    double vx = velocida * std::cos(a);
+
+    double vx = velocidad * std::cos(a);
     const double vy = velocidad * std::sin(a);
     if (turno == 2) vx = -vx;
 
@@ -115,7 +107,8 @@ void juegologica::avanzar(double segundos) {
 
         for (const auto& e : motor.geteventospaso()) {
             std::ostringstream os;
-            if (e.tipo == tipoevento::obstaculo && e.valor > 0.0) {
+
+            if (e.tipo == tipoevento::OBSTACULO && e.valor > 0.0) {
                 const obstaculo& o =motor.getobstaculos()[e.id2 - 1];
                 os << "¡"<< o.getnombre() << " del jugador " << o.getpropietario()
                    <<": -" << static_cast<int>(std::lround(e.valor))
@@ -131,8 +124,8 @@ void juegologica::avanzar(double segundos) {
             const double rs = ps [0].getradio() + radio_rival;
             if(dx *dx +dy * dy <= rs * rs) {
                 ganador = turno;
-                estado = estado::terminado;
-                mensaje = "el jugador " std::to_string(turno) + " ha eliminado al rival ";
+                estado = Estado::terminado;
+                mensaje = "el jugador " + std::to_string(turno) + " ha eliminado al rival ";
                 return;
             }
         }

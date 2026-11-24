@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 #include "particula.h"
-#include "simulacion.h"
 #include "motorfisico.h"
 #include "gestorarchivos.h"
 

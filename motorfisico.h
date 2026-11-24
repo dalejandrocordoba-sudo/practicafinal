@@ -41,7 +41,7 @@ public:
 
     void resolvercolisionesparedes(Particula& p);
     void resolvercolisionesobstaculos(Particula& p);
-    void resolvercolisionesParticulas();
+    void resolvercolisionesparticulas();
 
     double gettiempo() const { return tiempo; }
     double getancho() const { return anchoesenario; }

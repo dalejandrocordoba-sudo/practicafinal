@@ -12,25 +12,25 @@ void motorfisico::limpiarparticulas(){particulas.clear();}
 
 // segmento malo  ---void motorfisico::registrar(tipoevento t, int id1, int id2, double x, double y, double valor, const std::string &detalle)
 
-void MotorFisico::registrar(TipoEvento t, int id1, int id2, double x, double y,
+void motorfisico::registrar(tipoevento t, int id1, int id2, double x, double y,
                             double valor, const std::string& detalle) {
-    Evento e{tiempo, t, id1, id2, x, y, valor, detalle};
-    eventosPaso.push_back(e);
+    evento e{tiempo, t, id1, id2, x, y, valor, detalle};
+    eventospaso.push_back(e);
     historial.push_back(e);
 }
 
 void motorfisico::pasosimulacion(double dt){
-    eventosPaso.clear();
+    eventospaso.clear();
     tiempo += dt;
 
     for (auto& p : particulas) {
 
         if (!p.isactiva())continue;
-        p.actializarposicion(dt, gravedad);
+        p.actualizarposicion(dt, gravedad);
         resolvercolisionesparedes(p);
         resolvercolisionesobstaculos(p);
     }
-    resolvercolisionesParticulas();
+    resolvercolisionesparticulas();
 }
 
 
