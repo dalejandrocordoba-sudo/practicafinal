@@ -1,16 +1,34 @@
 #include "particula.h"
 
-Particula::Particula(float x, float y, float vx, float vy, float masa, float radio)
-    : x(x), y(y), VX(vx), VY(vy), masa(masa), radio(radio) {}
+Particula::Particula(int id, double x, double y, double vx, double vy,
+                     double masa, double radio, int lanzador)
+    : id(id), x(x), y(y), vx(vx), vy(vy), masa(masa), radio(radio),
+    activa(true), lanzador(lanzador) {}
 
-float Particula::getX() const { return x; }
-float Particula::getY() const { return y; }
-float Particula::getVX() const { return VX; }
-float Particula::getVY() const { return VY; }
-float Particula::getMasa() const { return masa; }
-float Particula::getRadio() const { return radio; }
+void Particula::actualizarPosicion(double dt, double g) {
+    if (!activa) return;
+    x += vx * dt;
+    y += vy * dt - 0.5 * g * dt * dt;
+    vy -= g * dt;
+}
 
-void Particula::setX(float x) { this->x = x; }
-void Particula::setY(float y) { this->y = y; }
-void Particula::setVX(float vx) { this->VX = vx; }
-void Particula::setVY(float vy) { this->VY = vy; }
+void Particula::fusionarCon(Particula& otra) {
+    if (!activa || !otra.activa) return;
+
+    const double M = masa + otra.masa;
+
+    // Conservación del momento lineal
+    vx = (masa * vx + otra.masa * otra.vx) / M;
+    vy = (masa * vy + otra.masa * otra.vy) / M;
+
+    // Nueva posición: centro de masa
+    x = (masa * x + otra.masa * otra.x) / M;
+    y = (masa * y + otra.masa * otra.y) / M;
+
+    // Conservación del área del círculo
+    radio = std::sqrt(radio * radio + otra.radio * otra.radio);
+    masa = M;
+
+    otra.activa = false;
+    otra.vx = otra.vy = 0.0;
+}
